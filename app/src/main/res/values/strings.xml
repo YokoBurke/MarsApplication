@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Mars Application</string>
+    <string name="mars_mission">The Mars 2020 rover mission is
+        part of NASAs Mars Exploration Program, a long-term effort
+        of robotic exploration of the Red Planet. The Mars 2020
+        mission addresses high-priority science goals for Mars
+        exploration, including key questions about the potential for life on Mars.
+        The mission takes the next step by not only seeking signs of habitable conditions
+        on Mars in the ancient past, but also searching for signs of past microbial life itself.
+        The Mars 2020 rover introduces a drill that can collect core samples of the most
+        promising rocks and soils and set them aside in a "cache" on the surface of
+        Mars. The mission also provides opportunities to gather knowledge and
+        demonstrate technologies that address the challenges of future human
+        expeditions to Mars. These include testing a method for producing oxygen from
+        the Martian atmosphere, identifying other resources (such as subsurface water),
+        improving landing techniques, and characterizing weather, dust, and other
+        potential environmental conditions that could affect future astronauts
+        living and working on Mars.</string>
+</resources>
