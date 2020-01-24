@@ -10,6 +10,7 @@
 
     <!--https://blog.mindorks.com/using-coordinator-layout-in-android-->
     <!--https://techblog.yahoo.co.jp/android/androidcoordinatorlayout/-->
+    <!--https://medium.com/androiddevelopers/theming-with-appcompat-1a292b754b35-->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_height="300dp"
@@ -40,7 +41,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="@string/app_name"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
