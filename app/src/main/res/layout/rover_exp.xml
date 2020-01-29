@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -22,6 +23,99 @@
             android:layout_height="wrap_content"
             android:text="@string/mars_mission" />
     </androidx.cardview.widget.CardView>
+    <!--https://medium.com/over-engineering/hands-on-with-material-components-for-android-buttons-76fa1a92ec0a -->
+    <!--https://stackoverflow.com/questions/58208871/could-not-use-materialbuttontogglegroup-though-i-can-use-materialbutton -->
 
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/rover_group"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        app:checkedButton="@id/curiosity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+      <com.google.android.material.button.MaterialButton
+            android:id="@+id/curiosity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:shapeAppearance="@style/Rounded"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:text="Curiosity" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/opportunity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:text="Opportunity" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/spirit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:shapeAppearance="@style/Rounded"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:text="Spirit" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_rover_description"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:alpha=".45"
+            android:src="@drawable/curiosity" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+
+        <TextView
+            android:id="@+id/text_rover_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Curiosity" />
+
+        <TextView
+            android:id="@+id/text_rover_description"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mars_mission" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_go"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:fabCustomSize="32dp"
+            android:layout_gravity="bottom|right"
+            android:scaleType="center"
+            app:srcCompat="@drawable/baseline_arrow_forward_white_24"
+            android:layout_margin="8dp"
+            app:elevation="6dp"
+            android:text="GO" />
+
+
+    </androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="75dp"/>
 
 </LinearLayout>

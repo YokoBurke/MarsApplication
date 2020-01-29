@@ -16,4 +16,26 @@
         improving landing techniques, and characterizing weather, dust, and other
         potential environmental conditions that could affect future astronauts
         living and working on Mars.</string>
+
+    <string name="mars_curiosity">Part of NASAs Mars Science Laboratory mission,
+        Curiosity is the largest and most capable rover ever sent to Mars.
+        Early in its mission, Curiositys scientific tools found chemical
+        and mineral evidence of past habitable environments on Mars.
+        It continues to explore the rock record from a
+        time when Mars could have been home to microbial life.</string>
+
+    <string name="mars_opportunity">Opportunity was the second of the two
+        rovers launched in 2003to land on Mars and begin traversing the
+        Red Planet in search ofsigns of past life. Opportunity has made a number
+        of discoveries about the Red Planet including dramatic evidence that long ago
+        at least one area of Mars stayed wet for an extended period and that
+        conditions could have been suitable for sustaining microbial life.</string>
+
+    <string name="mars_spirit">ABOUT THE MISSION
+One of two rovers launched in 2003 to explore Mars and search for signs of past life,
+        Spirit far outlasted her planned 90-day mission. In May 2009, the
+        rover became embedded in soft soil at a site called "Troy" with only
+        five working wheels to aid in the rescue effort. After months of
+        testing and carefully planned maneuvers, NASA ended efforts to free
+        the rover and eventually ended the mission on May 25, 2011.</string>
 </resources>
