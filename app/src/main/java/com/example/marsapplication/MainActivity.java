@@ -41,29 +41,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        roverName = getString(R.string.curiosity);
         ButterKnife.bind(this);
 
     }
 
     @OnClick(R.id.curiosity_button)
     public void buttonCuriosityClicked() {
-        roverName = getString(R.string.mars_curiosity);
-        roverDescTextView.setText(roverName);
-        roverTitleTextView.setText("Curiosity");
+        roverName = getString(R.string.curiosity);
+        roverDescTextView.setText(getResources().getString(R.string.mars_curiosity));
+        roverTitleTextView.setText(roverName);
     }
 
     @OnClick(R.id.spirit_button)
     public void buttonSpiritClicked() {
-        roverName = getString(R.string.mars_spirit);
-        roverDescTextView.setText(roverName);
-        roverTitleTextView.setText("Spirit");
+        roverName = getString(R.string.spirit);
+        roverDescTextView.setText(getResources().getString(R.string.mars_spirit));
+        roverTitleTextView.setText(roverName);
     }
 
     @OnClick(R.id.opportunity_button)
     public void buttonOnpportunityClicked() {
-        roverName = getString(R.string.mars_opportunity);
-        roverDescTextView.setText(roverName);
-        roverTitleTextView.setText("Opportunity");
+        roverName = getString(R.string.opportunity);
+        roverDescTextView.setText(getResources().getString(R.string.mars_opportunity));
+        roverTitleTextView.setText(roverName);
     }
 
     @OnClick(R.id.button_go)

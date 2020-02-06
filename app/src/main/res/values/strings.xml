@@ -38,4 +38,11 @@ One of two rovers launched in 2003 to explore Mars and search for signs of past 
         five working wheels to aid in the rescue effort. After months of
         testing and carefully planned maneuvers, NASA ended efforts to free
         the rover and eventually ended the mission on May 25, 2011.</string>
+
+
+    <string name="opportunity">Opportunity</string>
+    <string name="curiosity">Curiosity</string>
+    <string name="spirit">Spirit</string>
+
+    <string name="rover_select_title">Key Facts About Rover</string>
 </resources>

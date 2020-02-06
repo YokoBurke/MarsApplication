@@ -42,14 +42,14 @@
             android:layout_height="wrap_content"
             app:shapeAppearance="@style/Rounded"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            android:text="Curiosity" />
+            android:text="@string/curiosity" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/opportunity_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            android:text="Opportunity" />
+            android:text="@string/opportunity" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/spirit_button"
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             app:shapeAppearance="@style/Rounded"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            android:text="Spirit" />
+            android:text="@string/spirit" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <androidx.cardview.widget.CardView
@@ -96,7 +96,7 @@
             android:layout_margin="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/mars_mission" />
+            android:text="@string/mars_curiosity" />
 
         </LinearLayout>
 
