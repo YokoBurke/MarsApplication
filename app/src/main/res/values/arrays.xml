@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="curiosity_camera">
+        <item>@string/FHAZ</item>
+        <item>@string/RHAZ</item>
+        <item>@string/MAST</item>
+        <item>@string/CHEMCAM</item>
+        <item>@string/MAHLI</item>
+        <item>@string/MARDI</item>
+        <item>@string/NAVCAM</item>
+    </string-array>
+
+    <string-array name="oppotunity_camera">
+        <item>@string/FHAZ</item>
+        <item>@string/RHAZ</item>
+        <item>@string/NAVCAM</item>
+        <item>@string/PANCAM</item>
+        <item>@string/MINITES</item>
+    </string-array>
+
+    <string-array name="spirit_camera">
+        <item>@string/FHAZ</item>
+        <item>@string/RHAZ</item>
+        <item>@string/NAVCAM</item>
+        <item>@string/PANCAM</item>
+        <item>@string/MINITES</item>
+    </string-array>
+
+</resources>
