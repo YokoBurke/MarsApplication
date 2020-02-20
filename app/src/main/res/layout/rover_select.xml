@@ -1,53 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:id="@+id/text_rs_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="@string/rover_select_title" />
 
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="horizontal">
-
-    <TextView
-        android:id="@+id/text_rs_status"
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Active" />
+        android:orientation="vertical"
+        android:gravity="right"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/text_rs_title"
+        android:layout_alignParentLeft="true">
+    <TextView
+        android:id="@+id/text_rs_title_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Status:" />
+    <TextView
+        android:id="@+id/text_rs_title_launch_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Launch Date" />
+    <TextView
+        android:id="@+id/text_rs_title_landing_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Landing Date" />
 
+    <TextView
+        android:id="@+id/text_rs_title_total_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Total Photo" />
+
+    <TextView
+        android:id="@+id/text_rs_title_max_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Last Active" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="horizontal">
-    <TextView
-        android:id="@+id/text_rs_launch_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="01-01-2019" />
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/linearLayout1"
+        android:layout_below="@+id/text_rs_title"
+        android:gravity="left"
+        android:orientation="vertical">
 
+    <TextView
+            android:id="@+id/text_rs_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active" />
+
+        <TextView
+            android:id="@+id/text_rs_launch_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01-01-2019" />
+
+        <TextView
+            android:id="@+id/text_rs_landing_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01-01-2018" />
+>
+
+        <TextView
+            android:id="@+id/text_rs_total_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9586214" />
+
+
+
+        <TextView
+            android:id="@+id/text_rs_max_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="9/3/2018" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/text_rs_landing_date"
+        android:id="@+id/search_rs_title"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="01-01-2018" />
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/linearLayout1"
+        android:text="Search for image from Mars taken by this Rover"/>
 
-</LinearLayout>
+    <CalendarView
+        android:id="@+id/simpleCalendarView"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_rs_title"
+        android:layout_margin="16dp"/>
+
+    <Spinner
+        android:id="@+id/simpleSpinner"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/simpleCalendarView"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:shapeAppearance="@style/Rounded"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_below="@+id/simpleSpinner"
+        android:text="@string/Search"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_below="@+id/search_image"/>
+
+</RelativeLayout>

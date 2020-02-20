@@ -8,10 +8,10 @@ public class RoverManifest {
     String roverStatus;
     String roverLandingDate;
     String roverLaunchDate;
-    int roverTotalPhotos;
+    String roverTotalPhotos;
     String roverLastPhoto;
 
-    public RoverManifest(String rvName, String rvStatus, String rvLandingDate, String rvLaunchDate, int rvTotalPhotos, String rvLastPhoto){
+    public RoverManifest(String rvName, String rvStatus, String rvLandingDate, String rvLaunchDate, String rvTotalPhotos, String rvLastPhoto){
         roverName = rvName;
         roverStatus = rvStatus;
         roverLandingDate = rvLandingDate;
@@ -36,7 +36,7 @@ public class RoverManifest {
         return roverLaunchDate;
     }
 
-    public int getRoverTotalPhotos(){
+    public String getRoverTotalPhotos(){
         return roverTotalPhotos;
     }
 

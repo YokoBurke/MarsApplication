@@ -25,7 +25,7 @@ public class JsonUtils {
             String rvStatus = photo_manifest.getString("status");
             String rvLandingDate = photo_manifest.getString("landing_date");
             String rvLaunchDate = photo_manifest.getString("launch_date");
-            int rvTotalPhotos = photo_manifest.getInt("total_photos");
+            String rvTotalPhotos = photo_manifest.getString("total_photos");
             String rvLastPhoto =  photo_manifest.getString("max_date");
 
             myRoverManifest = new RoverManifest(rvName, rvStatus, rvLandingDate, rvLaunchDate, rvTotalPhotos, rvLastPhoto);

@@ -45,4 +45,17 @@ One of two rovers launched in 2003 to explore Mars and search for signs of past 
     <string name="spirit">Spirit</string>
 
     <string name="rover_select_title">Key Facts About Rover</string>
+
+    <string name="FHAZ">Front Hazard Avoidance Camera</string>
+    <string name="RHAZ">Rear Hazard Avoidance Camera</string>
+    <string name="MAST">Mast Camera</string>
+    <string name="CHEMCAM">Chemistry and Camera Complex</string>
+    <string name="MAHLI">Mars Hand Lens Imager</string>
+    <string name="MARDI">Mars Descent Imager</string>
+    <string name="NAVCAM">Navigation Camera</string>
+    <string name="PANCAM">Panoramic Camera</string>
+    <string name="MINITES">Mini Thermal Emission Spectrometer</string>
+
+    <string name="Search">Search Image</string>
+
 </resources>
