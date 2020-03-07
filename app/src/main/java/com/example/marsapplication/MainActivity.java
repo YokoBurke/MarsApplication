@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CalendarView;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.Calendar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.button_go)
     FloatingActionButton fabGo;
 
+
+
     String roverName;
 
     @Override
@@ -43,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
         roverName = getString(R.string.curiosity);
         ButterKnife.bind(this);
+
+
 
     }
 

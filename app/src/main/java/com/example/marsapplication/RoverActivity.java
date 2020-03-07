@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.CalendarView;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -18,6 +19,10 @@ import com.example.marsapplication.Utilities.NetworkUtils;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -47,10 +52,21 @@ public class RoverActivity extends AppCompatActivity {
     @BindView(R.id.text_rs_max_date)
     TextView roverMaxTextView;
 
+    @BindView(R.id.simpleCalendarView)
+    CalendarView myCalendar;
+
 
     private String whichRover;
     private RoverManifest roverManifest;
     private String[] spinnerStrings;
+
+    private String maxDateDate;
+    private String maxDateMonth;
+    private String maxDateYear;
+
+    private String landingDateDate;
+    private String landingDateMonth;
+    private String landingDateYear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +99,8 @@ public class RoverActivity extends AppCompatActivity {
 
         getRoverDataTask task = new getRoverDataTask();
         task.execute();
+
+
     }
 
     private class getRoverDataTask extends AsyncTask<URL, Void, String>{
@@ -115,6 +133,25 @@ public class RoverActivity extends AppCompatActivity {
                 roverLandingDateTextView.setText(roverManifest.getRoverLandingDate());
                 roverTotalPhotoTextView.setText(roverManifest.getRoverTotalPhotos());
                 roverMaxTextView.setText(roverManifest.getRoverLastPhoto());
+
+                maxDateYear = roverManifest.getRoverLastPhoto().substring(0,4);
+                maxDateMonth = roverManifest.getRoverLastPhoto().substring(5, 7);
+                maxDateDate = roverManifest.getRoverLastPhoto().substring(8, 10);
+
+                landingDateYear = roverManifest.getRoverLandingDate().substring(0,4);
+                landingDateMonth = roverManifest.getRoverLandingDate().substring(5, 7);
+                landingDateDate = roverManifest.getRoverLandingDate().substring(8, 10);
+
+                //https://stackoverflow.com/questions/39062890/how-to-show-a-specific-month-in-android-calendarview
+
+                Calendar calendar1 = Calendar.getInstance();
+                calendar1.set(Integer.parseInt(maxDateYear), Integer.parseInt(maxDateMonth), Integer.parseInt(maxDateDate));
+
+                Calendar calendar2 = Calendar.getInstance();
+                calendar2.set(Integer.parseInt(landingDateYear), Integer.parseInt(landingDateMonth), Integer.parseInt(landingDateDate));
+
+                myCalendar.setMinDate(calendar2.getTimeInMillis());
+                myCalendar.setMaxDate(calendar1.getTimeInMillis());
             }
         }
 
